@@ -1,2 +1,3 @@
 # House Price Prediction
- House Price Prediction (Linear Regression with Multiple Variable)
+
+Linear Regression with Multiple Variable. Gradient Descent is used to minimize cost Function
