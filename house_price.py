@@ -1,6 +1,7 @@
 from lab_utils_multi import  load_house_data, run_gradient_descent
 from lab_utils_multi import  norm_plot, plt_equal_scale, plot_cost_i_w
 from lab_utils_common import dlc
+from PIL import Image
 import streamlit as st
 import copy,math
 import numpy as np
