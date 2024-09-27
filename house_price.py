@@ -25,6 +25,21 @@ bed=int(bed_dict[bedroom])
 # st.write(f"Number of Floors: {floor}")
 # st.write(f"Age of House: {age} years")
 
+def room_image(x):
+    img1bhk = "./1BHK.jpeg"
+    img2bhk = "./2BHK.jpeg"
+    img3bhk = "./3BHK.jpeg"
+    img1 = Image.open(img1bhk)
+    img2 = Image.open(img2bhk)
+    img3 = Image.open(img3bhk)
+
+    if x == 1:
+        st.image(img1, caption="1BHK Room")
+    elif x==2:
+        st.image(img2, caption="2BHK Room")
+    else:
+        st.image(img3, caption="3BHK Room")
+
 def create_rooms_with_partitions_top_view(num_rooms,size):
     # Define the room dimensions
     j=np.sqrt(size)
@@ -167,7 +182,8 @@ def predict_target():
 X_norm,X_mu,X_sigma=z_score_normalize_features(X_train)
 w_norm, b_norm, hist = run_gradient_descent(X_norm, y_train, 1000, 1.0e-1, )
 result(size,bed,floor,age)
-create_rooms_with_partitions_top_view(bed+1,size)
+#create_rooms_with_partitions_top_view(bed+1,size)
+room_image(bed)
 
 
 st.header('Linear Regression with multiple Variable')
